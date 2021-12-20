@@ -1,5 +1,5 @@
 import { Option } from 'fp-ts/lib/Option'
-import { OptionOperation } from './ OptionOperation';
+import { OptionOperation } from './OptionOperation';
 
 export class YourOptionImpl implements OptionOperation {
     optPlus(a: Option<number>, b: Option<number>): Option<number> {
