@@ -46,12 +46,12 @@ describe("optPlusGtTen", (): void => {
 describe("optPlusGeTenAsTwicestring", (): void => {
   test("両方Someなら足す, 10以上なら2倍String", (): void => {
     const ret = impl.optPlusGeTenAsTwicestring(some(1), some(9));
-    expect(ret).toStrictEqual("20");
+    expect(ret).toStrictEqual(some("20"));
   });
 
   test("両方Someなら足す, 10未満ならそのままString", (): void => {
     const ret = impl.optPlusGeTenAsTwicestring(some(1), some(8));
-    expect(ret).toStrictEqual("9");
+    expect(ret).toStrictEqual(some("9"));
   });
 
   test("NoneがあったらNone(1)", (): void => {
@@ -97,7 +97,7 @@ describe("optFunc", (): void => {
   test("両方Someなら関数を当てる（1）", (): void => {
     const f = (i: number, j: number) => i + j;
     const ret = impl.optFunc(some(10), some(2), f);
-    expect(ret).toStrictEqual(some(5));
+    expect(ret).toStrictEqual(some(12));
   });
 
   test("両方Someなら関数を当てる（2）", (): void => {
